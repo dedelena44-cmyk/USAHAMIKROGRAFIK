@@ -84,6 +84,11 @@
             -moz-appearance: textfield;
             appearance: textfield;
         }
+        
+        /* Untuk scroll mulus saat klik navigasi */
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
 <body>
@@ -100,11 +105,25 @@
                 <h1 class="text-3xl font-bold text-gold tracking-wider">
                     DEDEBONTOT GRAFIKA
                 </h1>
-                <button id="open-cart-btn" class="relative text-gold text-2xl hover:text-white transition duration-300">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span id="cart-count" class="absolute -top-2 -right-3 bg-red-600 text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center">0</span>
-                </button>
+                <div class="flex items-center space-x-8">
+                    <nav class="hidden md:flex space-x-6">
+                        <a href="#tentang" class="text-gray-300 hover:text-gold transition duration-300 font-medium">Tentang Kami</a>
+                        <a href="#produk" class="text-gray-300 hover:text-gold transition duration-300 font-medium">Produk</a>
+                        <a href="#kontak" class="text-gray-300 hover:text-gold transition duration-300 font-medium">Kontak</a>
+                    </nav>
+                    <button id="open-cart-btn" class="relative text-gold text-2xl hover:text-white transition duration-300">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-count" class="absolute -top-2 -right-3 bg-red-600 text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center">0</span>
+                    </button>
+                </div>
             </div>
+            <!-- Navigasi Mobile (Opsional, tapi ditambahkan untuk kelengkapan) -->
+            <nav class="md:hidden bg-gray-900 p-4 flex justify-around">
+                <a href="#tentang" class="text-gray-300 hover:text-gold transition duration-300 font-medium text-sm">Tentang</a>
+                <a href="#galeri" class="text-gray-300 hover:text-gold transition duration-300 font-medium text-sm">Galeri</a>
+                <a href="#produk" class="text-gray-300 hover:text-gold transition duration-300 font-medium text-sm">Produk</a>
+                <a href="#kontak" class="text-gray-300 hover:text-gold transition duration-300 font-medium text-sm">Kontak</a>
+            </nav>
         </header>
 
         <!-- Main Content -->
@@ -116,10 +135,144 @@
                 <p class="text-lg text-gray-300 max-w-2xl mx-auto">Kualitas terbaik, harga bersahabat, dan pelayanan cepat.</p>
             </section>
 
+            <!-- Bagian Tentang Kami -->
+            <section id="tentang" class="bg-navy-light rounded-lg shadow-xl p-8 md:p-12 mb-16 border border-gold">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h3 class="text-3xl font-bold text-gold mb-6">Tentang DEDEBONTOT GRAFIKA</h3>
+                        <p class="text-gray-300 mb-4 leading-relaxed">
+                            Selamat datang di Percetakan Dedebontot Grafika, mitra terpercaya Anda untuk semua kebutuhan percetakan dan alat tulis kantor. Sejak didirikan, kami berkomitmen untuk memberikan hasil cetak berkualitas tinggi dengan harga yang kompetitif.
+                        </p>
+                        <p class="text-gray-300 leading-relaxed">
+                            Dari kartu nama, spanduk, hingga undangan pernikahan, tim profesional kami siap mewujudkan ide Anda menjadi kenyataan. Kami percaya bahwa setiap cetakan adalah karya seni, dan kami bangga menjadi bagian dari kesuksesan bisnis Anda.
+                        </p>
+                    </div>
+                    <div>
+                        <img src="https://github.com/dedelena44-cmyk/foto-lena1/blob/main/4.jpeg?raw=true" alt="Tentang Kami" class="rounded-lg shadow-lg w-full h-auto border-2 border-gold">
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Judul Grid Produk -->
+            <section id="produk" class="text-center mb-12 pt-8">
+                <h3 class="text-3xl font-bold text-gold mb-4">Produk & Jasa Kami</h3>
+                <p class="text-lg text-gray-300 max-w-2xl mx-auto">Temukan semua yang Anda butuhkan di sini.</p>
+            </section>
+
             <!-- Grid Produk -->
             <section id="product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
                 <!-- Produk akan dimasukkan di sini oleh JavaScript -->
             </section>
+            
+            <!-- Bagian Kontak -->
+            <section id="kontak" class="bg-navy-light rounded-lg shadow-xl p-8 md:p-12 mt-16 border border-gold">
+                <h3 class="text-3xl font-bold text-gold mb-8 text-center">Hubungi Kami</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <!-- Info Kontak -->
+                    <div class="text-gray-300">
+                        <h4 class="text-2xl font-semibold text-white mb-6">Info Kontak</h4>
+                        <div class="flex items-start space-x-4 mb-6">
+                            <i class="fas fa-map-marker-alt text-gold text-2xl mt-1"></i>
+                            <div>
+                                <h5 class="text-lg font-semibold text-white">Alamat</h5>
+                                <p>Jl.kiwarsiki dusun II Blok Tower Rt.01 Rw.05 Desa kedung Dalem Kec. Gegesik Kab.cirebon</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 mb-6">
+                            <i class="fas fa-phone-alt text-gold text-2xl mt-1"></i>
+                            <div>
+                                <h5 class="text-lg font-semibold text-white">Telepon / WhatsApp</h5>
+                                <p>0838-3612-9891</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 mb-6">
+                            <i class="fas fa-envelope text-gold text-2xl mt-1"></i>
+                            <div>
+                                <h5 class="text-lg font-semibold text-white">Email</h5>
+                                <p>@dedelena59.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Form Kontak -->
+                    <div>
+                        <h4 class="text-2xl font-semibold text-white mb-6">Kirim Pesan</h4>
+                        <form action="#" method="POST" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Nama Anda</label>
+                                <input type="text" id="name" name="name" class="w-full bg-gray-900 border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:border-gold" placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Anda</label>
+                                <input type="email" id="email" name="email" class="w-full bg-gray-900 border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:border-gold" placeholder="anda@email.com">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Pesan Anda</label>
+                                <textarea id="message" name="message" rows="4" class="w-full bg-gray-900 border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:border-gold" placeholder="Tuliskan pesan Anda di sini..."></textarea>
+                            </div>
+                            <div>
+                                <button type="submit" class="w-full bg-gold hover:bg-gold-dark text-black font-bold py-3 px-6 rounded-lg transition duration-300">
+                                    Kirim Pesan
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- ====================================================== -->
+            <!-- MULAI BAGIAN BARU YANG DIMINTA (DESKRIPSI & S&K) -->
+            <!-- ====================================================== -->
+            <section id="info-toko" class="bg-navy-light rounded-lg shadow-xl p-8 md:p-12 mt-16 border border-gold">
+                <h3 class="text-3xl font-bold text-gold mb-8 text-center">Info Toko & Syarat Ketentuan</h3>
+                
+                <div class="text-gray-300 leading-relaxed mb-8">
+                    <h4 class="text-2xl font-semibold text-white mb-4">Selamat Datang di Dedebontot Grafika!</h4>
+                    <p class="mb-4">
+                        Pusat ATK terlengkap dan Jasa Percetakan Digital. Temukan semua kebutuhan tulis dan promosi Anda di satu tempat.
+                    </p>
+                    <p class="mb-2"><strong class="text-gold">Menyediakan:</strong></p>
+                    <ul class="list-disc list-inside mb-4 space-y-2">
+                        <li><strong class="font-semibold text-white">ATK:</strong> Kertas HVS, Pulpen, Buku, Tinta, Map, dll.</li>
+                        <li><strong class="font-semibold text-white">Cetak:</strong> Spanduk, Banner, Stiker, Kartu Nama, Brosur.</li>
+                        <li><strong class="font-semibold text-white">Jasa:</strong> Print Dokumen, Jilid, Laminating.</li>
+                    </ul>
+                    <p class="mb-6">
+                        Silakan chat admin untuk kebutuhan custom atau jasa cetak.
+                    </p>
+                </div>
+
+                <div class="bg-gray-900 border border-yellow-800 rounded-lg p-6">
+                    <h4 class="text-2xl font-semibold text-red-500 mb-4">PERHATIAN PENTING & S&K TOKO DEDEBONTOT GRAFIKA:</h4>
+                    
+                    <div class="space-y-4 text-gray-300">
+                        <div>
+                            <h5 class="text-lg font-bold text-gold mb-2">1. Waspada Penipuan:</h5>
+                            <p>Harap berhati-hati terhadap pihak yang mengatasnamakan Dedebontot Grafika. Semua transaksi resmi hanya melalui kontak yang tertera di toko kami. Kami tidak bertanggung jawab atas segala bentuk penipuan yang terjadi di luar transaksi resmi toko.</p>
+                        </div>
+                        
+                        <div>
+                            <h5 class="text-lg font-bold text-gold mb-2">2. KEBIJAKAN VIDEO UNBOXING (WAJIB DIBACA):</h5>
+                            <ul class="list-disc list-inside space-y-2 pl-4">
+                                <li class="text-red-400 font-semibold">Kami TIDAK AKAN MELAYANI komplain dalam bentuk apapun (barang rusak, barang kurang, salah kirim) jika pembeli TIDAK menyertakan VIDEO UNBOXING yang jelas.</li>
+                                <li>Video unboxing wajib direkam secara utuh (tanpa jeda/edit) mulai dari paket masih dalam keadaan tersegel (kardus/plastik) hingga paket dibuka dan produk diperlihatkan dengan jelas.</li>
+                                <li class="font-semibold">Tanpa bukti video unboxing yang valid, segala klaim kerusakan atau kekurangan barang BUKAN menjadi tanggung jawab kami.</li>
+                                <li class="font-bold text-white">Membeli berarti setuju dengan ketentuan ini.</li>
+                            </ul>
+                        </div>
+                        
+                        <p class="pt-4 border-t border-gray-700 mt-6">
+                            Terima kasih atas perhatian dan kerja samanya.
+                        </p>
+                        <p class="font-bold text-gold text-lg">
+                            Selamat Berbelanja di Dedebontot Grafika!
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- ====================================================== -->
+            <!-- AKHIR BAGIAN BARU -->
+            <!-- ====================================================== -->
 
         </main>
         
@@ -182,7 +335,7 @@
                     <span id="cart-total" class="text-2xl font-bold text-gold">Rp 0</span>
                 </div>
                 <button id="checkout-btn" class="w-full bg-gold hover:bg-gold-dark text-black font-bold py-3 rounded-lg transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed" disabled>
-                    Checkout
+                    Checkout via WhatsApp
                 </button>
             </div>
         </div>
@@ -190,12 +343,17 @@
 
     <!-- Template untuk Kartu Produk (untuk JavaScript) -->
     <template id="product-card-template">
-        <div class="bg-navy-light rounded-lg shadow-xl overflow-hidden transform transition duration-300 hover:scale-105 border-2 border-transparent hover:border-gold">
+        <div class="bg-navy-light rounded-lg shadow-xl overflow-hidden transform transition duration-300 hover:scale-105 border-2 border-transparent hover:border-gold flex flex-col justify-between">
             <img class="product-image w-full h-56 object-cover" src="" alt="Gambar Produk">
-            <div class="p-6">
+            <div class="p-6 flex-grow">
                 <h3 class="product-name text-2xl font-bold text-gold mb-2">Nama Produk</h3>
-                <p class="product-price text-xl text-gray-200 mb-4">Rp 0</p>
-                <button class="buy-btn w-full bg-gold hover:bg-gold-dark text-black font-bold py-2 px-4 rounded-lg transition duration-30D4AF370">
+                <p class="product-price text-xl text-gray-200 mb-3">Rp 0</p>
+                <p class="product-description text-sm text-gray-400 mb-4 h-16 overflow-hidden">
+                    Deskripsi singkat produk akan muncul di sini.
+                </p>
+            </div>
+            <div class="p-6 pt-0">
+                <button class="buy-btn w-full bg-gold hover:bg-gold-dark text-black font-bold py-2 px-4 rounded-lg transition duration-300">
                     <i class="fas fa-shopping-bag mr-2"></i>Beli
                 </button>
             </div>
@@ -230,111 +388,129 @@
                     id: 1,
                     name: "Cetak Kartu Nama (1 Box)",
                     price: 50000,
-                    image: "https://www.selasar.com/wp-content/uploads/2020/04/Kartu-Nama-1.jpg" // Diperbarui
+                    image: "https://www.selasar.com/wp-content/uploads/2020/04/Kartu-Nama-1.jpg", // Diperbarui
+                    description: "Cetak kartu nama profesional (isi 100 pcs) untuk bisnis Anda."
                 },
                 {
                     id: 2,
                     name: "Stempel Otomatis",
                     price: 120000,
-                    image: "https://dimensy.id/uploads/posts/attachments/dimensy-1669105585815.png" // Diperbarui
+                    image: "https://dimensy.id/uploads/posts/attachments/dimensy-1669105585815.png", // Diperbarui
+                    description: "Stempel otomatis, praktis tanpa bak tinta, hasil jelas dan rapi."
                 },
                 {
                     id: 3,
                     name: "Cetak Spanduk (per m²)",
                     price: 25000,
-                    image: "https://lh7-rt.googleusercontent.com/docsz/AD_4nXerzY-Vl-t8-cQVelvuhtD3YtJFzf-Cha_m0wHwPo_1HamMBDO4GtM2vKntrIAOeS7eKjx17x7AEWaMPZ9OwyLcZvN50_iSNLyYzPifVixFBLLihauGDDLw0mpPkNSFDWGip_gsaA?key=3MZy0XK1_oY8AYytqgFtKqz3" // Diperbarui
+                    image: "https://lh7-rt.googleusercontent.com/docsz/AD_4nXerzY-Vl-t8-cQVelvuhtD3YtJFzf-Cha_m0wHwPo_1HamMBDO4GtM2vKntrIAOeS7eKjx17x7AEWaMPZ9OwyLcZvN50_iSNLyYzPifVixFBLLihauGDDLw0mpPkNSFDWGip_gsaA?key=3MZy0XK1_oY8AYytqgFtKqz3", // Diperbarui
+                    description: "Spanduk/Banner bahan flexi berkualitas tinggi (harga per meter persegi)."
                 },
                 {
                     id: 4,
                     name: "Kertas HVS A4 (1 Rim)",
                     price: 65000,
-                    image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgFMmFB6tNlxyydaa7jwv3g-CzOFme96Yyrf98Bs8c0cq4jcjzjgVGGj1gnDJyWNyduCbczhlc2GlTtNKAWaUjOWE38FbFUh305ahA87Uzq_aNCNQxH3jrhKUwLg8isFo4Va4MVa2EXdrBf/s640/Ukuran+Kertas+A4.jpg" // Diperbarui
+                    image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgFMmFB6tNlxyydaa7jwv3g-CzOFme96Yyrf98Bs8c0cq4jcjzjgVGGj1gnDJyWNyduCbczhlc2GlTtNKAWaUjOWE38FbFUh305ahA87Uzq_aNCNQxH3jrhKUwLg8isFo4Va4MVa2EXdrBf/s640/Ukuran+Kertas+A4.jpg", // Diperbarui
+                    description: "Kertas HVS A4 70gr (isi 500 lembar) untuk kebutuhan fotokopi dan cetak."
                 },
                 {
                     id: 5,
                     name: "Cetak Brosur A5 (100 pcs)",
                     price: 150000,
-                    image: "https://www.revoprintonline.com/liteprint/application/liteprint/revo/assets/product_image/1674461738528-Sub-Sub-Kategori-A5-new.png" // Diperbarui
+                    image: "https://www.revoprintonline.com/liteprint/application/liteprint/revo/assets/product_image/1674461738528-Sub-Sub-Kategori-A5-new.png", // Diperbarui
+                    description: "Cetak brosur promosi full color ukuran A5 (isi 100 pcs)."
                 },
                 {
                     id: 6,
                     name: "ID Card + Tali",
                     price: 35000,
-                    image: "https://brosurkilat.com/wp-content/uploads/2024/11/cetak-id-card.jpg" // Diperbarui
+                    image: "https://brosurkilat.com/wp-content/uploads/2024/11/cetak-id-card.jpg", // Diperbarui
+                    description: "Cetak ID Card karyawan, siswa, atau panitia, sudah termasuk tali lanyard."
                 },
                 {
                     id: 7,
                     name: "Buku Yasin (Soft Cover)",
                     price: 15000,
-                    image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEihgAMpudJWEVQ9fRNlNbLggxAEsuQgsK-3e6S6PMu7E4DHMD2BiRmVLvm2zG5o6udKqPYyGOLE4JaTrQteNG8GAbJ_gTIOWP-cdtkHeTEPABPzUSdY3tGY-qKLGr0VspL4X0kIwjWx2Y0DsyTYDqf15eNwlBd-1rPhepezQTR1IJxVQpraN2b9ItIeoR42/w1200-h630-p-k-no-nu/587.jpg" // Diperbarui
+                    image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEihgAMpudJWEVQ9fRNlNbLggxAEsuQgsK-3e6S6PMu7E4DHMD2BiRmVLvm2zG5o6udKqPYyGOLE4JaTrQteNG8GAbJ_gTIOWP-cdtkHeTEPABPzUSdY3tGY-qKLGr0VspL4X0kIwjWx2Y0DsyTYDqf15eNwlBd-1rPhepezQTR1IJxVQpraN2b9ItIeoR42/w1200-h630-p-k-no-nu/587.jpg", // Diperbarui
+                    description: "Cetak buku Yasin soft cover untuk acara tahlilan dan syukuran (per pcs)."
                 },
                 {
                     id: 8,
                     name: "Pulpen Gel (1 Lusin)",
                     price: 45000,
-                    image: "https://blog-asset.jakmall.com/2024/07/quality-pens_431161-80252-1.webp" // Diperbarui
+                    image: "https://blog-asset.jakmall.com/2024/07/quality-pens_431161-80252-1.webp", // Diperbarui
+                    description: "Satu lusin (12 pcs) pulpen gel, tinta lancar dan nyaman digunakan."
                 },
                 // --- Produk ATK Baru ---
                 {
                     id: 9,
                     name: "Tipex / Correction Fluid",
                     price: 8000,
-                    image: "https://img.id.my-best.com/product_images/8b7fc433fe31eecf5df73d0f28a6cb3f.png?ixlib=rails-4.3.1&q=70&lossless=0&w=800&h=800&fit=clip&s=18b8b0609466dc3358f409548388bd08"
+                    image: "https://img.id.my-best.com/product_images/8b7fc433fe31eecf5df73d0f28a6cb3f.png?ixlib=rails-4.3.1&q=70&lossless=0&w=800&h=800&fit=clip&s=18b8b0609466dc3358f409548388bd08",
+                    description: "Koreksi kesalahan tulis dengan cepat dan bersih menggunakan tipex."
                 },
                 {
                     id: 10,
                     name: "Penggaris Besi 30cm",
                     price: 12000,
-                    image: "https://image1ws.indotrading.com/s3/productimages/webp/co256968/p1158608/w600-h600/8fe0a370-e46d-490a-b262-7335dae0b769.jpg"
+                    image: "https://image1ws.indotrading.com/s3/productimages/webp/co256968/p1158608/w600-h600/8fe0a370-e46d-490a-b262-7335dae0b769.jpg",
+                    description: "Penggaris besi 30cm yang presisi, anti patah, dan tahan lama."
                 },
                 {
                     id: 11,
                     name: "Gunting Sedang",
                     price: 15000,
-                    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFARwasNDIyN2ZzgOcU0zzVVtNWSi9rDJSLQ&s"
+                    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFARwasNDIyN2ZzgOcU0zzVVtNWSi9rDJSLQ&s",
+                    description: "Gunting serbaguna ukuran sedang untuk kebutuhan kantor dan sekolah."
                 },
                 {
                     id: 12,
                     name: "Pensil 2B (1 Pcs)",
                     price: 3000,
-                    image: "https://parto.id/asset/foto_produk/image_jpeg_172178918893.jpeg"
+                    image: "https://parto.id/asset/foto_produk/image_jpeg_172178918893.jpeg",
+                    description: "Pensil 2B standar untuk ujian, menggambar, dan menulis sehari-hari."
                 },
                 {
                     id: 13,
                     name: "Penghapus",
                     price: 2500,
-                    image: "https://id-test-11.slatic.net/p/99e7f08b819b700c63d14f5e8b0d6a9c.jpg"
+                    image: "https://id-test-11.slatic.net/p/99e7f08b819b700c63d14f5e8b0d6a9c.jpg",
+                    description: "Penghapus pensil berkualitas tinggi, bersih tanpa meninggalkan sisa."
                 },
                 {
                     id: 14,
                     name: "Binder A5",
-                    price: 75000,
-                    image: "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//111/MTA-48739692/bantex_bantex_a5_trendy_multi_ring_binder_20_hole_sky_blue_3124_23_full05_noac4ah3.jpg"
+                    price: 35000,
+                    image: "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//111/MTA-48739692/bantex_bantex_a5_trendy_multi_ring_binder_20_hole_sky_blue_3124_23_full05_noac4ah3.jpg",
+                    description: "Binder A5 (20 ring) untuk menyimpan catatan kuliah atau sekolah Anda."
                 },
                 {
                     id: 15,
                     name: "Isi Ulang Kertas Binder",
                     price: 20000,
-                    image: "https://cdn.ralali.id/assets/img/Libraries/Basic-Loose-Leaf-Binder-Paper-A5-Kertas-Binder-A5-Refil-Binder_4BXX3khHwpw5yzaS_1565845466.jpg"
+                    image: "https://cdn.ralali.id/assets/img/Libraries/Basic-Loose-Leaf-Binder-Paper-A5-Kertas-Binder-A5-Refil-Binder_4BXX3khHwpw5yzaS_1565845466.jpg",
+                    description: "Kertas isi ulang binder A5 bergaris (isi 50 lembar)."
                 },
                 // --- Produk Jasa Undangan Baru ---
                 {
                     id: 16,
-                    name: "Jasa Desain & Cetak Undangan Pernikahan",
+                    name: "Jasa Undangan Pernikahan",
                     price: 2500, // Harga per pcs
-                    image: "https://awsimages.detik.net.id/community/media/visual/2024/04/13/contoh-undangan-pernikahan-simple-dan-elegan-2.png?w=800"
+                    image: "https://awsimages.detik.net.id/community/media/visual/2024/04/13/contoh-undangan-pernikahan-simple-dan-elegan-2.png?w=800",
+                    description: "Desain dan cetak undangan pernikahan elegan (harga mulai per pcs)."
                 },
                 {
                     id: 17,
-                    name: "Jasa Desain & Cetak Undangan Ulang Tahun",
+                    name: "Jasa Undangan Ulang Tahun",
                     price: 1500, // Harga per pcs
-                    image: "https://marketplace.canva.com/EAGIDzJz4hg/1/0/1143w/canva-undangan-ulang-tahun-anak-ilustrasi-mermaid-Sjpxg6DXDvQ.jpg"
+                    image: "https://marketplace.canva.com/EAGIDzJz4hg/1/0/1143w/canva-undangan-ulang-tahun-anak-ilustrasi-mermaid-Sjpxg6DXDvQ.jpg",
+                    description: "Desain dan cetak undangan ulang tahun anak/dewasa (harga per pcs)."
                 },
                 {
                     id: 18,
-                    name: "Jasa Desain & Cetak Undangan Hajatan",
+                    name: "Jasa Undangan Lainnya",
                     price: 2000, // Harga per pcs
-                    image: "https://www.fotocopypercetakanjakarta.com/wp-content/uploads/2019/07/GJP-22-516x480.png"
+                    image: "https://www.fotocopypercetakanjakarta.com/wp-content/uploads/2019/07/GJP-22-516x480.png",
+                    description: "Untuk acara syukuran, khitanan, aqiqah, dan lainnya (harga per pcs)."
                 }
             ];
 
@@ -390,6 +566,7 @@
                     const card = productTemplate.content.cloneNode(true);
                     card.querySelector('.product-name').textContent = product.name;
                     card.querySelector('.product-price').textContent = formatRupiah(product.price);
+                    card.querySelector('.product-description').textContent = product.description; // Baris baru
                     card.querySelector('.product-image').src = product.image;
                     card.querySelector('.product-image').alt = product.name;
                     card.querySelector('.buy-btn').dataset.id = product.id;
@@ -653,13 +830,50 @@
                 }
             });
             
-            // Tombol Checkout (Hanya simulasi)
+            // ======================================================
+            // MULAI PERUBAHAN CHECKOUT
+            // ======================================================
             checkoutBtn.addEventListener('click', () => {
-                alert('Fitur checkout belum diimplementasikan.\nTotal Belanja Anda: ' + cartTotal.textContent);
+                if (cart.length === 0) return; // Jangan lakukan apa-apa jika keranjang kosong
+
+                const waNumber = "6283836129891"; // Nomor dari info kontak Anda (format internasional)
+                let message = "Halo Dedebontot Grafika, saya mau pesan:\n\n";
+                let total = 0;
+
+                // Buat daftar pesanan
+                cart.forEach(item => {
+                    const subtotal = item.price * item.quantity;
+                    message += `*${item.name}*\n`;
+                    message += `  Jumlah: ${item.quantity} x ${formatRupiah(item.price)}\n`;
+                    message += `  Subtotal: ${formatRupiah(subtotal)}\n\n`;
+                    total += subtotal;
+                });
+
+                // Tambahkan Total
+                message += `*Total Pesanan: ${formatRupiah(total)}*\n\n`;
+                message += `Saya tunggu info lanjut untuk pembayaran. Terima kasih.`;
+
+                // Encode pesan untuk URL
+                const encodedMessage = encodeURIComponent(message);
+                
+                // Buat URL WhatsApp
+                // Catatan: Saya menggunakan nomor dari info kontak Anda (0838-3612-9891)
+                // Link yang Anda berikan (https://wa.me/message/72BB3AMG7CKMI1) adalah link profil bisnis
+                // dan tidak bisa membawa isi keranjang (teks). Cara ini JAUH LEBIH BAIK
+                // untuk Anda karena langsung menerima rincian pesanan.
+                const waUrl = `https://wa.me/${waNumber}?text=${encodedMessage}`;
+
+                // Buka link WhatsApp di tab baru
+                window.open(waUrl, '_blank');
+
+                // Kosongkan keranjang dan tutup modal setelah checkout
                 cart = [];
                 updateCartUI();
                 cartModal.classList.add('hidden');
             });
+            // ======================================================
+            // AKHIR PERUBAHAN CHECKOUT
+            // ======================================================
             
             // Set Tahun Sekarang
             currentYearSpan.textContent = new Date().getFullYear();
@@ -671,5 +885,4 @@
         });
     </script>
 </body>
-
 </html>
